@@ -1,0 +1,729 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004a6f; 
+    color: rgb(207, 206, 206);
+    position: relative;
+    padding: 15px 20px;
+    z-index: 1000;
+    
+}
+.logo a {
+    text-decoration: none;
+    color: rgb(207, 206, 206);
+    font-weight: bold;
+    font-size: 13px;
+    margin-left: 41px;
+}
+.nav-buttons{
+    margin-left: 30px;
+}
+.main-nav{
+    flex:1
+}
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px; 
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: rgb(207, 206, 206);
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+.header-buttons ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin-right: 20px;
+}
+.header-buttons ul li a {
+    text-decoration: none;
+    color: rgb(207, 206, 206);
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+.sign-in-container {
+    margin-right: 20px;
+}
+.sign-in-container .btn.sign-in {
+    text-decoration: none;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.hamburger {
+    display: none; 
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    outline: none;
+    z-index: 2000;
+}
+.hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none; 
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: #004a6f;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px 0;
+        z-index: 1001;
+        
+    }
+    .main-nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: left;
+    }
+    .header-buttons{
+        display: none;
+    }
+    .banner-section {
+        transition: margin-top 0.3s ease; 
+    }
+    .hamburger {
+        display: flex; 
+        position:absolute;
+    }
+    .main-nav.open {
+        display: flex; 
+    }
+    .sign-in-container .btn.sign-in{
+        padding:3px 10px 3px 10px;
+    }
+    .logo a{
+        margin-left: 55px;
+    }
+
+}
+.video-play-icon {
+    background-color: transparent;  
+    border: none;                   
+    border-radius: 50%;             
+    padding: 0;                    
+    cursor: pointer;                
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+    overflow: hidden;               
+    width: 70px;                    
+    height: 70px;                   
+}
+.video-play-icon img {
+    border-radius: 50%;             
+    width: 100%;                   
+    height: 100%;                   
+}
+.banner-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to bottom right, #d6ecf3, #f0f8ff, #ffffff, #d0e7f9);
+    color: #004a6f;
+}
+.breadcrumb {
+    position: absolute;
+    font-size: 10px;
+    margin-bottom: 20px;
+    color: #555;
+    left: 63px;
+    top:90px;
+    font-weight: 550;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: black;
+    margin-right: 5px;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+.banner-content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+.play-button {
+    display: inline-block;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.pricing-info {
+    font-size: 18px;
+    margin: 20px 0;
+    color: black;
+}
+.highlight-price {
+    color: #004a6f;
+    font-weight: bold;
+    font-size: 50px;
+}
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.btn-download {
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-buy-now {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 92px 15px 10px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    text-align: center;
+}
+.btn-buy-now .discount {
+    display: inline-block;
+    background-color: #d9534f;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-left: 79px; 
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 10% 100%, 0% 50%); 
+    font-weight: bold;
+}
+.btn-download {
+    background-color: #ff6347;
+    color: white;
+}
+.btn-download:hover {
+    background-color: #ff856f;
+}
+.btn-buy-now {
+    background-color: #1e90ff;
+    color: white;
+    position: relative;
+}
+.btn-buy-now:hover {
+    background-color: #4aaaff;
+}
+.discount {
+    position: absolute;
+    background: #ff6347;
+    border-radius: 50%;
+}
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1px 30px;
+    max-width: 900px;
+    margin: 40px auto; 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 550;
+}
+.feature-item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+.sprite-icon {
+    display: inline-block;
+    width: 28px;  
+    height: 25px; 
+    background: url('./img/otherlinks-sprite.png') no-repeat;
+    overflow: hidden; 
+    border: 2px solid rgb(63, 62, 62);
+    border-radius: 50%;
+}
+.icon-1 {
+    background-position: 5px 5px; 
+}
+.icon-2 {
+    background-position: 6px -16px; 
+}
+
+.icon-3 {
+    background-position: 7px -39px; 
+}
+
+.icon-4 {
+    background-position: 9px -90px; 
+}
+
+.icon-5 {
+    background-position: 6px -165px; 
+}
+
+.icon-6 {
+    background-position: 7px -39px;
+}
+.product-navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    max-width: 1000px;
+    margin: 0 auto; 
+    border-bottom: 1px solid #e0e0e0; 
+}
+@media(max-width:768px){
+    .product-navigation{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 15px;
+}
+
+.nav-item p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 550;
+}
+
+.nav-item.active p {
+    border-bottom: 2px solid #00a7c7; 
+}
+.sprites-icon {
+    display: block;
+    width: 32px;
+    aspect-ratio: 1; 
+    background: url('./img/product-icon-sprites.png') no-repeat;
+    margin-bottom: 20px;
+}
+.icon-overview {
+    background-position: 1px 12px; 
+}
+.icon-features {
+    background-position: 2px -22px; 
+}
+.icon-how-it-works {
+    background-position: 2px -54px; 
+}
+.icon-user-manual {
+    background-position: 2px -89px; 
+}
+.icon-faq {
+    background-position: 2px -127px;
+}
+.icon-videos {
+    background-position: 2px -159px; 
+}
+.icon-pricing {
+    background-position: 2px -192px;
+}
+
+.icon-screenshots {
+    background-position: 2px -229px;
+}
+
+
+/* Laptop Section with Image and Text */
+.laptop-section {
+    position: relative;
+    width: 100%;
+    background: url('./img/accelerate_img.jpg') no-repeat center center;
+    background-size: cover; 
+    padding: 20px 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;  
+}
+.laptop-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px; 
+    background: linear-gradient(to bottom, rgb(154 152 152 / 20%), transparent);
+    z-index: 1; 
+}
+.laptop-content {
+    padding: 15px 30px;
+    border-radius: 10px;
+    display: inline-block;
+}
+.laptop-content p {
+    font-size: 24px;
+    word-spacing: 6px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #004a6f;
+    font-weight: bold;
+}
+.laptop-content a {
+    color: #007bff; 
+    text-decoration: none;
+    font-weight: bold;
+}
+.laptop-content a:hover {
+    text-decoration: underline; 
+}
+.content-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #f8fbff;
+    gap: 30px;
+    padding: 40px 20px;
+    margin: 0 auto; 
+}
+.left-content {
+    flex: 1.2;
+    max-width: 563px;
+    margin-left: 10%;
+}
+.left-content h4 {
+    color: #007bff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.left-content h2 {
+    font-size: 28px;
+    color: #004a6f;
+    margin-bottom: 20px;
+    font-weight: 550;
+}
+.left-content p {
+    font-size: 16px;
+    color: rgb(81 80 80);
+    margin-bottom: 20px;
+    text-align: justify;
+    font-weight: 500;
+}
+.right-content {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 563px;
+    margin-right: 10%;
+}
+.right-block h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 550;
+}
+.right-block p {
+    font-size: 16px;
+    text-align: justify;
+    color: rgb(81 80 80);
+    font-weight: 500;
+}
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .right-content {
+        flex-direction: column;
+        max-width: 100%;
+        margin-right:auto;
+    }
+
+    .left-content {
+        max-width: 100%;
+        margin-left: auto;
+    }
+
+    .right-block {
+        flex: 1 1 100%;
+    }
+    
+    
+}
+
+@media (max-width:768px){
+    .features{
+        display:grid;
+        font-size:9px;
+        gap:10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.free-trial-section {
+    position: relative;
+    width: 100%;
+    background: url('./img/bg-how-does-office365-mailbox-work.jpg') no-repeat center center;
+    background-size: cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+}
+.content-left {
+    flex: 1;
+    border-radius: 10px;
+    font-weight: 550;
+}
+.content-left h2 {
+    font-size: 28px;
+    color: #004a6f;
+    margin-bottom: 20px;
+}
+.content-left p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+.content-left ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.content-left ol li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.btn-try-free {
+    background-color: #007bff;
+    color: rgb(235, 231, 231);
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-try-free:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+.video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 94%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.video-play-button img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);  /* Shadow for better visual effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .content-left {
+        max-width: 100%;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+    .video-play-button {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .free-trial-section{
+        background: linear-gradient(to bottom right, #b3e5fc, #d1c4e9);
+    }
+    .laptop-section{
+        background: linear-gradient(to bottom right, #b3e5fc, #ffe0b2);
+
+    }
+    .btn-download{
+        padding:5px 20px;
+    }
+
+}
+.site-footer {
+    background-color: #1a1c21; 
+    color: #d3d3d3; 
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.footer-column {
+    flex: 1;
+    max-width: 225px;
+    margin-bottom: 20px;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    color: #b4b1b1;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #b4aeae;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #007bff;
+}
+
+.footer-column p {
+    font-size: 14px;
+    color: #b4aeae;
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+
+}
+
+.footer-bottom p a {
+    color: #b4aeae;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom p a:hover {
+    color: #007bff; 
+}
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+    .site-header {
+        flex-wrap: wrap; 
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap; 
+        gap: 15px; 
+        justify-content: space-around; 
+    }
+
+    .header-buttons {
+        flex-wrap: wrap; 
+        margin-top: 10px; 
+    }
+
+    .main-nav ul li a, .header-buttons ul li a, .sign-in-container .btn.sign-in {
+        font-size: 12px; 
+        padding: 5px; 
+    }
+
+    .sign-in-container {
+        order: 1; 
+        margin-top: 10px;
+    }
+
+    
+    .site-header {
+        padding: 10px 15px; 
+    }
+
+    
+    .hamburger {
+        display: block; 
+    }
+
+    .main-nav {
+        display: none; 
+    }
+
+    .main-nav.open {
+        display: flex;
+        position: absolute;
+        top: 50px; 
+        left: 0;
+        width: 100%;
+        background-color: #004a6f;
+        padding-top: 20px;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1001;
+    }
+
+    .header-buttons {
+        display: none; 
+    }
+    .product-navigation{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+}
